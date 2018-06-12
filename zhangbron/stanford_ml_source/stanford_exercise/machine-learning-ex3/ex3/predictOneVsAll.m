@@ -30,7 +30,14 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
+[val, index] = max(sigmoid(X * all_theta'),[],2);
+for i=1:length(index)
+  if index(i)==10
+    index(i)=0
+  endif
+endfor
 
+p = index;
 
 
 
