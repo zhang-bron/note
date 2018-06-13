@@ -106,3 +106,63 @@ Using a single hidden layer is a good starting default. You can train your neura
 - Lower-order polynomials (low model complexity) have high bias and low variance. In this case, the model fits poorly consistently.
 - Higher-order polynomials (high model complexity) fit the training data extremely well and the test data extremely poorly. These have low bias on the training data, but very high variance.
 - In reality, we would want to choose a model somewhere in between, that can generalize well but also fits the data reasonably well.
+
+### 垃圾邮件识别
+
+通过对邮件中单词的统计实现垃圾邮件判别。
+
+- 如何实现高精度的邮件判别
+  - 收集足够数据(但并不总是是实用的)
+  - 构建基于邮件路由（从邮件头）的复杂特征
+  - 构建基于邮件正文的复杂特征：例如，discount和discounts是否应该区别对待？deal和dealer？关于标点的？
+  - 实现更为复杂的算法来检测（故意）拼写错误的情形
+
+<img src="image/spam_1.png"/>
+
+### Error analysis
+
+- 一般尽可能通过简单的的算法实现该问题，然后利用验证集测试模型效果
+- 绘制学习曲线来决定是否增大数据量或者增加特征能够提升模型精度
+- 误差分析，人为的去检测那些被误分类的数据，发现其被误分类的系统规律，找出一些最难被分类正确的样本的特征。
+
+It is very important to get error results as a single, numerical value. Otherwise it is difficult to assess your algorithm's performance. For example if we use stemming, which is the process of treating the same word with different forms (fail/failing/failed) as one word (fail), and get a 3% error rate instead of 5%, then we should definitely add it to our model. However, if we try to distinguish between upper case and lower case letters and end up getting a 3.2% error rate instead of 3%, then we should avoid using this new feature. Hence, we should try new things, get a numerical value for our error rate, and based on our result decide whether we want to keep the new feature or not.
+
+<img src="image/error_nan.png"/>
+
+<img src="image/i.png"/>
+
+
+
+### Error metrics for Skewed Classes
+
+数据中类别比例不均衡-**偏斜类**（例如，正例特别多，负例特别少）
+
+- 当遇到偏斜类问题时，如何衡量算法的优劣？
+
+  精确度和召回率：用于高的precision和recall的模型更好
+
+<img src="image/metric_pre_re.png"/>
+
+### precision 和 recall的权衡
+
+- 当给出不同算法的precision和recall，如何判断哪种算法更好？
+
+  - F1 score:  $2\frac{PR}{P+R}$.
+
+  - 只有当P和R都很大的时候，F才会比较大
+
+    ​
+
+
+
+<img src="image/recall_precision.png"/>
+
+<img src="image/f_score.png"/>
+
+
+
+### Using large data
+
+- 前提是特征要尽可能的包含相关信息，才能利用大量数据实现高性能的学习算法。
+
+<img src="image/ree.png" />
