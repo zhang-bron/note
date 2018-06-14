@@ -1,5 +1,7 @@
 ## Support Vector Machine
 
+凸优化问题，存在全局最优
+
 ### Large Margin Classification
 
 逻辑回归与svm的一个区别是：
@@ -13,3 +15,47 @@
 <img src="image/svm3.png">
 
 <img src="image/svm4.png">
+
+
+
+### Kernels
+
+<img src="image/non_linear.png">
+
+
+
+<img src="image/kernel1.png">
+
+
+
+<img src="image/fe.png">
+
+
+
+<img src="image/landmarks.png">
+
+<img src="image/kernel2.png">
+
+<img src="image/kernel3.png">
+
+
+
+<img src="image/svm5.png">
+
+
+
+<img src="image/svm6.png">
+
+<img src="image/svm7.png">
+
+<img src="image/svm8.png">
+
+
+
+### multi-class classification
+
+- one vs all like linear regression
+
+<img src="image/svm9.png">
+
+<img src="image/svm10.png">
