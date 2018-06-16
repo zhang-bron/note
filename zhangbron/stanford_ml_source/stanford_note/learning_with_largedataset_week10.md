@@ -42,3 +42,30 @@
 
 ### Online Learning
 
+使用的算法与随机梯度下降类似，唯一的区别是它***不会使用一个固定的数据集***。
+
+<img src="image/online_learning1.png">
+
+<img src="image/online_learning2.png">
+
+<img src="image/online_learning3.png">
+
+
+
+### Map reduce and data parallelism
+
+
+
+#### 映射化简算法
+
+数据分开训练（在不同的machine上训练），然后将训练的结果合并
+
+- 只要训练函数可以表示为训练数据的求和形式，可以考虑map reduce
+
+<img src="image/map_reduce1.png">
+
+<img src="image/map_reduce2.png">
+
+<img src="image/map_reduce3.png">
+
+<img src="image/map_reduce4.png">
