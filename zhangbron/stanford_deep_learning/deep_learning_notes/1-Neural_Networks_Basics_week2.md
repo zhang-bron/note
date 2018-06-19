@@ -43,17 +43,39 @@
 
 <img src="image/nn17.png">
 
-<img src="image/nn16.png">
+<img src="image/nnn.png">
 
-<img src="image/nn18.png">
+<img src="image/nnn1.png">
 
-<img src="image/nn18.png">
 
-<img src="image/nn18.png">
 
-<img src="image/nn18.png">
+###　Broadcasting in Python
 
-<img src="image/nn18.png">
+<img src="image/nnn2.png">
+
+### Python
+
+- 增加语言的灵活性
+
+- 有时会引入bug，例如当维度不匹配时，你希望它抛出异常，但是由于broadcast的存在可能不会抛出异常
+
+- numpy
+
+  - 尽量不要使用秩为1的数组
+
+    <img src="image/nnn3.png">
+
+    <img src="image/nnn4.png">
+
+    <img src="image/nnn5.png">
+
+
+
+
+
+
+
+
 
 
 
